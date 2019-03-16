@@ -1,54 +1,40 @@
 <html>
+
 <head>	
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> 
-</script>
-
-<script>
-    $(document).ready(function(){
-        $("addElementTextbox").click(function(){
-            $("p").append("<input type='text'></input><br>");
-        });
-    }
-</script>
-     
-<script>
-    
-    var userEnteredList=[];
- 
-
-function seacrhUsingLinearSearch() {
-    
-    var userInput = document.getElementById("inputText").value;
-    // var defaultList = [1,2,3,4,5,6,7,8,9,10];
-    var index=0, elementFound= false, result;
-
-    while (index < availableList.length) {
-        if(userInput==availableList[index]) {
-            elementFound=true;
-            break;
+  <script>
+    function seacrhUsingLinearSearch() {
+        var userInput = document.getElementById("inputText").value;
+        var availableList = [1,2,3,4,5,6,7,8,9,10];
+        var index=0;
+        var elementFound= false;
+        var result;
+        while (index < availableList.length) {
+            if(userInput==availableList[index]) {
+                elementFound=true;
+                break;
+            }
+            index++;
         }
-        index++;
+        if(elementFound) {
+            result = "Element Found at location :"+index;
+        } else {
+            result = "Element Not Found in the list";
+        }
+
+        document.getElementById("searchedElement").innerHTML = "You searched for : " + userInput;
+        document.getElementById("result").innerHTML = result;
     }
-
-    if(elementFound) {
-        result = "Element Found at location :"+index;
-    } else {
-        result = "Element Not Found in the list";
-    }
-
-    document.getElementById("result").innerHTML = result;
-}
-
-</script>
+  </script>
 </head>
-
 
 <body>
 
-
+  <p><b>Currently the list contains : [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]</b></p>
 	<p>Search your element by using Linear Search</p>
-    <button id="addElementTextbox"></button>
-	<input type="text" id="inputText" onblur="seacrhUsingLinearSearch()"></input>
+
+  <input type="text" id="inputText" onblur="seacrhUsingLinearSearch()"></input>
+  <br>
+  <div id="searchedElement"></div>
 	<p id="result"> </p>
 
 
