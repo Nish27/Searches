@@ -2,7 +2,7 @@
 
 ## LINEAR SEARCH
 
-Just Clone the Repo and run the html file. 
+Just Clone the Repo and execute LinearSearch.html file. 
 
 **This is how the LINEAR SEARCH webpage looks like:**
 
