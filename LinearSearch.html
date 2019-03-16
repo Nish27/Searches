@@ -1,42 +1,43 @@
 <html>
 
 <head>	
-  <script>
-    function seacrhUsingLinearSearch() {
-        var userInput = document.getElementById("inputText").value;
-        var availableList = [1,2,3,4,5,6,7,8,9,10];
-        var index=0;
-        var elementFound= false;
-        var result;
-        while (index < availableList.length) {
-            if(userInput==availableList[index]) {
-                elementFound=true;
-                break;
-            }
-            index++;
-        }
-        if(elementFound) {
-            result = "Element Found at location :"+index;
-        } else {
-            result = "Element Not Found in the list";
-        }
+    <link rel="stylesheet" type="text/css" href="styling.css">
+    <script src="LinearSearchFunction.js"></script>
 
-        document.getElementById("searchedElement").innerHTML = "You searched for : " + userInput;
-        document.getElementById("result").innerHTML = result;
-    }
-  </script>
+    <style>
+      body {
+        background-color:gray;
+        text-align: center;
+        text-shadow: 0.1px 1px black;
+      }
+      .informationForUser {
+        background-color: coral;
+      
+      }
+
+      .inputFromUser {
+        background-color:cornsilk;
+      }
+
+    </style>
 </head>
 
 <body>
 
+  <div class="informationForUser">
   <p><b>Currently the list contains : [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]</b></p>
-	<p>Search your element by using Linear Search</p>
+	</div>
 
-  <input type="text" id="inputText" onblur="seacrhUsingLinearSearch()"></input>
+  <div class="inputFromUser">
+  <p>Enter your element here & Press [TAB]: Let's search it using Linear Search</p>
+  <input type="text" id="inputText" onblur="seacrhUsingLinearSearch()"></input><br>
   <br>
-  <div id="searchedElement"></div>
+  </div>
+  
+  <div id="resultSection">
+  <p id="searchedElement"></p>
 	<p id="result"> </p>
-
+  </div>
 
 </body>
 </html>
