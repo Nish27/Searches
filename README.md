@@ -2,7 +2,7 @@
 
 ## LINEAR SEARCH
 
-Just Clone the Repo and execute LinearSearch.html file. 
+Just clone the repository and open LinearSearch.html file under /LinearSearch directory
 
 **This is how the LINEAR SEARCH webpage looks like:**
 
